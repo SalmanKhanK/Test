@@ -1,51 +1,51 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <div class="progress" >
     <div class="progress-bar bg-secondary"style="width:{{value}}"></div>
   </div>
 <div class="container">
-    <h3 >Question 3 of 20</h3>
+    <h3 >Question 14 of 20</h3>
     <p>Entertainment: Video Games</p> 
-    <span class="fa fa-star "></span>
-    <span class="fa fa-star "></span>
-    <span class="fa fa-star "></span>
+    <span class="fa fa-star {{check1}}"></span>
+    <span class="fa fa-star {{check2}}"></span>
+    <span class="fa fa-star {{check3}}"></span>
     <span class="fa fa-star "></span>
     <span class="fa fa-star ch"></span>    
-    <h5 >What is Ron Weasley's middle name?</h5>
+    <h5 >What is the name of Cream the Rabbit's mom in the 'Sonic the Hedgehog' series?</h5>
     <div class="row">
         <div class="col-sm-4">
             <button  class="rounded text-center w-50 mt-4 mr-3 " style="background-color:lightgrey;border: 1px solid black;"
              (click)="wrongOpt()" (click)="questionCount()" (click)="per()" [disabled]="clicked" (click)="actionMethod(); clicked = true;" (click)="nextBut()"
-            >Arthur</button> 
+            >Peach</button>
         </div>
         <div class="col-sm-4">
             <button class="rounded text-center w-50 mt-4" style="background-color:lightgrey;border: 1px solid black;"
             
           [disabled]="clicked" (click)="actionMethod(); clicked = true;" (click)="nextBut()"
-          (click)= "correctOpt()" (click)="count()" (click)="per()" (click)="questionCount()" 
-            >Bilius</button>
+          (click)= "correctOpt()" (click)="questionCount()" (click)="per()" (click)="count()" 
+            >Vanilla</button>
         </div>
     </div>
     <div class="row">
         <div class="col-md-4">
                <button class="rounded text-center w-50 mt-4" style="background-color:lightgrey;border: 1px solid black;"
                (click)="wrongOpt()" (click)="questionCount()" (click)="per()" [disabled]="clicked" (click)="actionMethod(); clicked = true;" (click)="nextBut()"
-               >John</button>
+               >Strawberry</button>
         </div>
         <div class="col-md-4">
                  <button class="rounded text-center w-50 mt-4 " style="background-color:lightgrey;border: 1px solid black;"
                  (click)="wrongOpt()" (click)="questionCount()" (click)="per()" [disabled]="clicked" (click)="actionMethod(); clicked = true;" (click)="nextBut()"
-                 >Dominic</button>
+                 >Mint</button>
         </div>
     </div>
             <h3  style="margin-left: 200px;" class="mt-4">{{correct}}</h3>
             <h3 style="margin-left: 200px;" class="mt-4">{{wrong}}</h3>
             <p *ngIf="showNext">
             <button type="button" style="margin-left: 190px; background-color:lightgrey;border: 1px solid black;width: 150px;"
-            routerLink="/question5" 
+            routerLink="/question15"
             class="rounded text-center ">Next</button>
         </p>
-        <p>Score:{{percentage}}</p>
   <footer style="margin-top: 200px;">
+    <p>Score:{{percentage}}</p>
     <div class="progress mt-5 w-50 rounded" style="height: 25px;">
         <div class="progress-bar bg-dark" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
         <div class="progress-bar bg-secondary" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
@@ -56,3 +56,5 @@
     
 
 </div>
+
+

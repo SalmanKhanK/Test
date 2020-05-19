@@ -4,31 +4,36 @@
   </div>
 <div class="container">
     <h3 >Question 5 of 20</h3>
-    <p>Entertainment: Video Games</p>    
+    <p>Entertainment: Video Games</p> 
+    <span class="fa fa-star "></span>
+    <span class="fa fa-star "></span>
+    <span class="fa fa-star "></span>
+    <span class="fa fa-star "></span>
+    <span class="fa fa-star ch"></span>    
     <h5 >At the start of a standard game of the Monopoly, if you throw a double six, which square would you land on?</h5>
     <div class="row">
         <div class="col-sm-4">
             <button  class="rounded text-center w-50 mt-4 mr-3 " style="background-color:lightgrey;border: 1px solid black;"
-             (click)="wrongOpt()" [disabled]="clicked" (click)="actionMethod(); clicked = true;" (click)="nextBut()"
+             (click)="wrongOpt()" (click)="questionCount()" (click)="per()" [disabled]="clicked" (click)="actionMethod(); clicked = true;" (click)="nextBut()"
             >SWater Works</button> 
         </div>
         <div class="col-sm-4">
             <button class="rounded text-center w-50 mt-4" style="background-color:lightgrey;border: 1px solid black;"
             
           [disabled]="clicked" (click)="actionMethod(); clicked = true;" (click)="nextBut()"
-          (click)= "correctOpt()"  
+          (click)= "correctOpt()" (click)="questionCount()" (click)="per()" (click)="count()" 
             >Electric Company</button>
         </div>
     </div>
     <div class="row">
         <div class="col-md-4">
                <button class="rounded text-center w-50 mt-4" style="background-color:lightgrey;border: 1px solid black;"
-               (click)="wrongOpt()" [disabled]="clicked" (click)="actionMethod(); clicked = true;" (click)="nextBut()"
+               (click)="wrongOpt()" (click)="questionCount()" (click)="per()"[disabled]="clicked" (click)="actionMethod(); clicked = true;" (click)="nextBut()"
                >Chance</button>
         </div>
         <div class="col-md-4">
                  <button class="rounded text-center w-50 mt-4 " style="background-color:lightgrey;border: 1px solid black;"
-                 (click)="wrongOpt()" [disabled]="clicked" (click)="actionMethod(); clicked = true;" (click)="nextBut()"
+                 (click)="wrongOpt()" (click)="questionCount()" (click)="per()" [disabled]="clicked" (click)="actionMethod(); clicked = true;" (click)="nextBut()"
                  >Community Chest</button>
         </div>
     </div>
@@ -36,9 +41,10 @@
             <h3 style="margin-left: 200px;" class="mt-4">{{wrong}}</h3>
             <p *ngIf="showNext">
             <button type="button" style="margin-left: 190px; background-color:lightgrey;border: 1px solid black;width: 150px;"
-        
+            routerLink="/question4" 
             class="rounded text-center ">Next</button>
         </p>
+      <p>Score:{{percentage}}</p>
   <footer style="margin-top: 200px;">
     <div class="progress mt-5 w-50 rounded" style="height: 25px;">
         <div class="progress-bar bg-dark" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>

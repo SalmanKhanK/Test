@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-question1',
@@ -6,25 +7,56 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./question1.component.css']
 })
 export class Question1Component implements OnInit {
-
-  constructor() { }
+   dataSr:DataService
+  constructor( dataSr:DataService) {
+    this.dataSr=dataSr
+   }
   clicked=false
-  value="0%";
+  value="5%";
   showNext;
+  correct;
+  wrong;
+  coUnt;
+ check;
+
+ wrongans;
   nextBut(){
     return this.showNext=true;
   }
   ngOnInit(): void {
+     
   }
-  correct;
-  wrong;
-    correctOpt(){
-      return  this.correct="Correct!"
-    }
+  
+  correctOpt(){
+       this.correct=this.dataSr.correctOpt();
+      
+        
+      
+ }
+
     wrongOpt(){
-     return this.wrong="Sorry";
+     this.wrong=this.dataSr.wrongOpt();
+     this.wrongans=this.dataSr.wrong;
+     console.log("wrong",this.wrongans);
     }
     actionMethod(){
         return this.clicked = true;
     }
+    count(){
+      
+       this.coUnt=this.dataSr.coun();
+       console.log("CorrectOPt",this.coUnt)
+        
+        
+    }
+    
+    question;
+    percentage;
+    questionCount(){
+     this.question=this.dataSr.quesCount();
+     console.log("QuizC",this.question)
+    
+      }
+      
+    
 }

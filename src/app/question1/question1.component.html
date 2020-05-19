@@ -1,20 +1,26 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="progress" >
     <div class="progress-bar bg-secondary"style="width:{{value}}"></div>
   </div>
 <div class="container">
     <h3 >Question 1 of 20</h3>
-    <p>Entertainment: Video Games</p>    
+    <p>Entertainment: Video Games</p> 
+<span class="fa fa-star "></span>
+<span class="fa fa-star "></span>
+<span class="fa fa-star "></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star "></span>   
     <h5 >What was the name of the hero in the 80s animated video game 'Dragon's Lair'?</h5>
     <div class="row">
         <div class="col-sm-4">
             <button  class="rounded text-center w-50 mt-4 mr-3 " style="background-color:lightgrey;border: 1px solid black;"
-            (click)= "correctOpt()" [disabled]="clicked" (click)="actionMethod(); clicked = true;" (click)="nextBut()"
+            (click)= "correctOpt()"   (click)="questionCount()" (click)="count()" [disabled]="clicked" (click)="actionMethod(); clicked = true;" (click)="nextBut()"
             >Dirk the Daring</button>
         </div>
         <div class="col-sm-4">
             <button class="rounded text-center w-50 mt-4" style="background-color:lightgrey;border: 1px solid black;"
             
-            (click)="wrongOpt()" [disabled]="clicked" (click)="actionMethod(); clicked = true;" (click)="nextBut()"
+            (click)="wrongOpt()"  (click)="questionCount()" [disabled]="clicked" (click)="actionMethod(); clicked = true;" (click)="nextBut()"
           
             >Arthur</button>
         </div>
@@ -22,12 +28,12 @@
     <div class="row">
         <div class="col-md-4">
                <button class="rounded text-center w-50 mt-4" style="background-color:lightgrey;border: 1px solid black;"
-               (click)="wrongOpt()" [disabled]="clicked" (click)="actionMethod(); clicked = true;" (click)="nextBut()"
+               (click)="wrongOpt()"  (click)="questionCount()" [disabled]="clicked" (click)="actionMethod(); clicked = true;" (click)="nextBut()"
                >Sir Toby Belch</button>
         </div>
         <div class="col-md-4">
                  <button class="rounded text-center w-50 mt-4 " style="background-color:lightgrey;border: 1px solid black;"
-                 (click)="wrongOpt()" [disabled]="clicked" (click)="actionMethod(); clicked = true;" (click)="nextBut()"
+                 (click)="wrongOpt()"  (click)="questionCount()" [disabled]="clicked" (click)="actionMethod(); clicked = true;" (click)="nextBut()"
                  >Guy of Gisbourne</button>
         </div>
     </div>

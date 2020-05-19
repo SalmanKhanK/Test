@@ -2,50 +2,53 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 
 @Component({
-  selector: 'app-question6',
-  templateUrl: './question6.component.html',
-  styleUrls: ['./question6.component.css']
+  selector: 'app-question4',
+  templateUrl: './question4.component.html',
+  styleUrls: ['./question4.component.css']
 })
-export class Question6Component implements OnInit {
-
+export class Question4Component implements OnInit {
   dataSr:DataService
   constructor( dataSr:DataService) {
     this.dataSr=dataSr
    }
-
   clicked=false
-  value="25%";
+  value="30%";
   showNext;
+  correct;
+  wrong;
   coUnt;
   nextBut(){
     return this.showNext=true;
   }
   ngOnInit(): void {
+    
   }
-  correct;
-  wrong;
-    correctOpt(){
-      return  this.correct=this.dataSr.correctOpt();
-    }
+  
+  correctOpt(){
+        return this.correct=this.dataSr.correctOpt();
+ }
+    
     wrongOpt(){
      return this.wrong=this.dataSr.wrongOpt();
     }
     actionMethod(){
         return this.clicked = true;
     }
+    percentage;
     count(){
       this.coUnt=this.dataSr.coun();
-      console.log(this.coUnt);
+      console.log("corrct",this.coUnt)
+     
+      
   }
-  question;
+    question;
   questionCount(){
     // this.question=this.dataSr.quesCount();
     // console.log("Ques",this.question)
   }
   totalQuiz;
-  correctop;
-  percentage;
-  per(){
+   correctop;
+   per(){
     this.totalQuiz=this.dataSr.quesCount();
     console.log("TotalQuiz",this.totalQuiz)
     this.correctop=this.dataSr.a;
@@ -55,5 +58,6 @@ export class Question6Component implements OnInit {
 
 
 }
+   
   
 }
